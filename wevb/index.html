@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTÉFACT — Souvenir Monument Models, Learning & Painting Kits</title>
+    <meta name="description" content="Discover handcrafted 3D souvenir models of world-famous monuments, student learning kits, and painting kits. Bring history to your desk with ARTÉFACT.">
+    <meta name="keywords" content="souvenir models, 3D monuments, Taj Mahal model, Eiffel Tower replica, student learning kit, painting kit, artifacts, collectibles, desk decor">
+    <meta property="og:title" content="ARTÉFACT — Souvenir Monument Models & Learning Kits">
+    <meta property="og:description" content="Handcrafted miniature replicas of world monuments. Educational kits for students. Premium painting kits.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcement-bar">
+        <div class="container announcement-content">
+            <span>🏛️ New Arrivals — <strong>Colosseum & Pyramids</strong> collection now available. Free shipping on orders over ₹999</span>
+            <button class="announcement-close" id="announcement-close" aria-label="Close announcement">&times;</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="#" class="logo" id="logo">
+                <span class="logo-icon">🏛</span>
+                ARTÉFACT
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#" class="nav-link active" id="nav-home">Home</a>
+                <a href="#products" class="nav-link" id="nav-shop">Shop</a>
+                <a href="#categories" class="nav-link" id="nav-categories">Collections</a>
+                <a href="#deals" class="nav-link" id="nav-deals">Offers</a>
+                <a href="#" class="nav-link" id="nav-about">About</a>
+            </nav>
+            <div class="header-actions">
+                <button class="header-icon-btn" id="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                </button>
+                <button class="header-icon-btn" id="wishlist-btn" aria-label="Wishlist">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <button class="header-icon-btn cart-btn" id="cart-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-modal">
+            <div class="search-input-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                <input type="text" class="search-input" id="search-input" placeholder="Search monuments, kits, painting sets..." autocomplete="off">
+                <kbd class="search-kbd">ESC</kbd>
+            </div>
+            <div class="search-suggestions" id="search-suggestions">
+                <div class="search-suggestion-title">Popular Searches</div>
+                <div class="search-tags">
+                    <span class="search-tag" data-search="taj mahal">Taj Mahal</span>
+                    <span class="search-tag" data-search="eiffel tower">Eiffel Tower</span>
+                    <span class="search-tag" data-search="learning kit">Learning Kit</span>
+                    <span class="search-tag" data-search="painting">Painting Kit</span>
+                    <span class="search-tag" data-search="pyramids">Pyramids</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-shapes">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
+        <div class="hero-pattern"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Handcrafted Collection
+                </div>
+                <h1 class="hero-title">
+                    Bring the World's <span class="hero-gradient">Monuments</span> to Your Desk
+                </h1>
+                <p class="hero-subtitle">
+                    Handcrafted miniature 3D souvenir replicas of iconic world monuments, student learning kits & premium painting kits. Perfect gifts for history lovers.
+                </p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary btn-lg" id="hero-cta">
+                        Explore Collection
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </a>
+                    <a href="#deals" class="btn btn-ghost btn-lg" id="hero-deals">
+                        View Offers
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-value" data-count="200">0</span>
+                        <span class="hero-stat-label">Monument Models</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value" data-count="50">0</span>
+                        <span class="hero-stat-label">Learning Kits</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value" data-count="15000">0</span>
+                        <span class="hero-stat-label">Happy Collectors</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-product-showcase">
+                    <div class="hero-product-card hero-product-main">
+                        <img src="images/taj-mahal.jpg" alt="Taj Mahal 3D Model" loading="eager">
+                        <div class="hero-product-info">
+                            <span class="hero-product-tag">Best Seller</span>
+                            <span class="hero-product-price">₹1,499</span>
+                        </div>
+                    </div>
+                    <div class="hero-product-card hero-product-float-1">
+                        <img src="images/eiffel-tower.jpg" alt="Eiffel Tower Model" loading="eager">
+                    </div>
+                    <div class="hero-product-card hero-product-float-2">
+                        <img src="images/pyramids.jpg" alt="Pyramids Model" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Brands/Monuments -->
+    <section class="brands-marquee">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span class="brand-name">TAJ MAHAL</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">EIFFEL TOWER</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">COLOSSEUM</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">PYRAMIDS OF GIZA</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">STATUE OF LIBERTY</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">BIG BEN</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">MACHU PICCHU</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">CHRIST THE REDEEMER</span>
+                <span class="brand-dot">◆</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span class="brand-name">TAJ MAHAL</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">EIFFEL TOWER</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">COLOSSEUM</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">PYRAMIDS OF GIZA</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">STATUE OF LIBERTY</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">BIG BEN</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">MACHU PICCHU</span>
+                <span class="brand-dot">◆</span>
+                <span class="brand-name">CHRIST THE REDEEMER</span>
+                <span class="brand-dot">◆</span>
+            </div>
+        </div>
+    <!-- 3D Stacked Monument Showcase (carousel-07) -->
+    <section class="stacked-carousel-section" id="monument-showcase">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Interactive 3D Experience</span>
+                <h2 class="section-title">Explore Artifacts in 3D Motion</h2>
+                <p class="section-subtitle">Drag and swipe left or right to inspect the world's most famous monuments</p>
+            </div>
+            <div class="stacked-carousel-container" id="stacked-carousel">
+                <div class="stacked-carousel-drag-area" id="carousel-drag-area" title="Drag to rotate"></div>
+                <div class="stacked-carousel-cards" id="stacked-cards-wrapper">
+                    <!-- Cards dynamically rendered by app.js with motion physics -->
+                </div>
+                <div class="stacked-carousel-controls">
+                    <button class="stacked-nav-btn" id="prev-slide-btn" aria-label="Previous Monument">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <span class="stacked-hint">Swipe or Drag to Rotate</span>
+                    <button class="stacked-nav-btn" id="next-slide-btn" aria-label="Next Monument">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header-text">
+                    <span class="section-tag">Collections</span>
+                    <h2 class="section-title">Browse by Category</h2>
+                    <p class="section-subtitle">From miniature monuments to creative learning tools</p>
+                </div>
+                <a href="#" class="btn btn-outline" id="categories-view-all">
+                    View All
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" data-category="monuments" id="cat-monuments">
+                    <div class="category-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"></path><path d="M5 20V8l7-5 7 5v12"></path><path d="M9 20v-4h6v4"></path><path d="M9 12h.01M15 12h.01"></path></svg>
+                    </div>
+                    <h3 class="category-name">3D Monuments</h3>
+                    <span class="category-count">120+ models</span>
+                </div>
+                <div class="category-card" data-category="learning" id="cat-learning">
+                    <div class="category-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    </div>
+                    <h3 class="category-name">Learning Kits</h3>
+                    <span class="category-count">50+ kits</span>
+                </div>
+                <div class="category-card" data-category="painting" id="cat-painting">
+                    <div class="category-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 16 8"></path><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"></path><path d="M8.39 7.61c.84-.84 1.5-1.5 2.6-2.6 2.2-2.2 5.63-1.34 7.07.13 1.45 1.45 2.34 4.88.13 7.07-1.1 1.1-1.76 1.76-2.6 2.6"></path></svg>
+                    </div>
+                    <h3 class="category-name">Painting Kits</h3>
+                    <span class="category-count">35+ kits</span>
+                </div>
+                <div class="category-card" data-category="wonders" id="cat-wonders">
+                    <div class="category-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                    </div>
+                    <h3 class="category-name">World Wonders</h3>
+                    <span class="category-count">7 wonders set</span>
+                </div>
+                <div class="category-card" data-category="gifts" id="cat-gifts">
+                    <div class="category-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></svg>
+                    </div>
+                    <h3 class="category-name">Gift Sets</h3>
+                    <span class="category-count">25+ bundles</span>
+                </div>
+                <div class="category-card" data-category="collector" id="cat-collector">
+                    <div class="category-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"></path><path d="M11 3 8 9l4 13 4-13-3-6"></path><path d="M2 9h20"></path></svg>
+                    </div>
+                    <h3 class="category-name">Collector's Edition</h3>
+                    <span class="category-count">Limited pieces</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header-text">
+                    <span class="section-tag">Featured</span>
+                    <h2 class="section-title">Our Best Sellers</h2>
+                    <p class="section-subtitle">Handcrafted with precision and love for history</p>
+                </div>
+                <div class="products-filters" id="products-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="monuments">Monuments</button>
+                    <button class="filter-btn" data-filter="learning">Learning Kits</button>
+                    <button class="filter-btn" data-filter="painting">Painting Kits</button>
+                </div>
+            </div>
+            <div class="products-grid" id="products-grid">
+                <!-- Products injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Deals Banner -->
+    <section class="deals-banner" id="deals">
+        <div class="container deals-content">
+            <div class="deals-text">
+                <span class="deals-badge">Limited Time Offer</span>
+                <h2 class="deals-title">Monsoon Heritage Sale</h2>
+                <p class="deals-subtitle">Flat 40% off on all monument models & learning kits. Make learning fun this season!</p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="countdown-days">02</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="countdown-hours">14</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="countdown-mins">36</span>
+                        <span class="countdown-label">Mins</span>
+                    </div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="countdown-secs">48</span>
+                        <span class="countdown-label">Secs</span>
+                    </div>
+                </div>
+                <a href="#products" class="btn btn-primary btn-lg" id="deals-cta">
+                    Shop Now
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+            </div>
+            <div class="deals-visual">
+                <div class="deals-product-stack">
+                    <img src="images/taj-mahal.jpg" alt="Taj Mahal Model Deal" class="deals-img deals-img-1">
+                    <img src="images/colosseum.jpg" alt="Colosseum Model Deal" class="deals-img deals-img-2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" id="feature-shipping">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    </div>
+                    <h3 class="feature-title">Secure Packaging</h3>
+                    <p class="feature-desc">Bubble-wrapped & boxed with care. Free shipping over ₹999.</p>
+                </div>
+                <div class="feature-card" id="feature-returns">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                    </div>
+                    <h3 class="feature-title">Easy Returns</h3>
+                    <p class="feature-desc">15-day hassle-free return on all products.</p>
+                </div>
+                <div class="feature-card" id="feature-handmade">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3 class="feature-title">Handcrafted Quality</h3>
+                    <p class="feature-desc">Each piece made with premium materials & artisan skill.</p>
+                </div>
+                <div class="feature-card" id="feature-support">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                    </div>
+                    <h3 class="feature-title">Collector Support</h3>
+                    <p class="feature-desc">Dedicated help for custom orders & bulk gifts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">Loved by Collectors & Students</h2>
+                <p class="section-subtitle">Hear from our happy customers across India</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" id="testimonial-1">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"The Taj Mahal model is absolutely stunning! Every detail is captured beautifully. It sits proudly on my desk and everyone who visits asks about it. Perfect souvenir!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #b08d57, #8b6914);">R</div>
+                        <div class="testimonial-info">
+                            <span class="testimonial-name">Rahul Sharma</span>
+                            <span class="testimonial-role">Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" id="testimonial-2">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Bought the learning kit for my daughter. She loves the miniature monuments and the flashcards are perfect for her school project. Amazing educational value!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #c17f59, #8b4513);">P</div>
+                        <div class="testimonial-info">
+                            <span class="testimonial-name">Priya Mehta</span>
+                            <span class="testimonial-role">Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" id="testimonial-3">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"The painting kit is wonderful! I painted the Eiffel Tower canvas and it turned out great. Quality paints, good brushes, and the monument prints are beautiful. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #d4a574, #a0522d);">A</div>
+                        <div class="testimonial-info">
+                            <span class="testimonial-name">Ananya Reddy</span>
+                            <span class="testimonial-role">Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <div class="newsletter-bg-glow"></div>
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Join the Heritage Circle</h2>
+                    <p class="newsletter-subtitle">Subscribe for new monument launches, exclusive collector discounts & early access to limited editions.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="newsletter-input-wrap">
+                            <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Enter your email" required>
+                            <button type="submit" class="btn btn-primary newsletter-btn" id="newsletter-submit">
+                                Subscribe
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="newsletter-disclaimer">No spam, unsubscribe anytime. Read our <a href="#">Privacy Policy</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo footer-logo">
+                        <span class="logo-icon">🏛</span>
+                        ARTÉFACT
+                    </a>
+                    <p class="footer-desc">Handcrafted souvenir monument models, student learning kits & painting kits. Bringing the world's heritage to your home, one artifact at a time.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Instagram" id="social-instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter" id="social-twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube" id="social-youtube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.08c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.41z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-links-title">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">3D Monuments</a></li>
+                        <li><a href="#">Learning Kits</a></li>
+                        <li><a href="#">Painting Kits</a></li>
+                        <li><a href="#">Gift Sets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-links-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Artisans</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-links-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchange</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Custom Orders</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARTÉFACT. Handcrafted with ❤️ in India.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                Your Cart
+            </h3>
+            <button class="cart-close" id="cart-close" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="cart-empty" id="cart-empty">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <p>Your cart is empty</p>
+                <span>Add some artifacts to get started</span>
+            </div>
+        </div>
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <div class="cart-total">
+                <span>Total</span>
+                <span class="cart-total-value" id="cart-total">₹0</span>
+            </div>
+            <button class="btn btn-primary btn-lg btn-full" id="checkout-btn">
+                Checkout
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+            <p class="cart-note">Free shipping on orders over ₹999</p>
+        </div>
+    </aside>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span id="toast-message">Item added to cart</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
